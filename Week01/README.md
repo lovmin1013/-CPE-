@@ -71,7 +71,7 @@ int main()
 { 
 	int i,j,n,G;
 	scanf("%d",&n);
-	while(n){//計算所有GCD(i,j)的總和
+	while(n!=0){//計算所有GCD(i,j)的總和
 		G=0;
 		for(i=1; i<n; i++){
 			for(j=i+1; j<=n; j++){
