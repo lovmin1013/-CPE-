@@ -58,7 +58,7 @@ int main()
 }
 ```
 UVA11417-GCD:  
-算最大公因數
+算最大公因數之總和  
 EX:n=4 算GCD(1,2)+GCD(1,3)+GCD(1,4)+GCD(2,3)+GCD(2,4)+GCD(3,4)    
 ```C
 #include <stdio.h>
