@@ -11,3 +11,8 @@ UVA10929-You can say 11
 ## week03
 UVA10268-498bis  
 UVA10812-Beat the Spread!  
+
+## week04
+UVA11063-B2-Sequence  
+UVA11764-Jumping Mario  
+UVA12019-Doom's Day Algorithm    
