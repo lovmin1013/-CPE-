@@ -97,7 +97,29 @@ UVA272-TeX Quotes:
  每一組雙引號的第一個 " 必須用兩個 ` 字元（就是 `` ）來代替  
  每一組雙引號的第二個 " 必須用兩個 ' 字元（ 就是 ''）來代替  
 ```C
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
+int main()
+{
+	char c;//輸入字元
+	int flag=1;//設第一個"，flag=1 
+	while((c=getchar())!=EOF){
+		if(c=='"'){
+			if(flag){
+				printf("``");
+			}
+			else{
+				printf("''");
+			}
+			flag= !flag;
+		}
+		else{
+			printf("%c",c);
+		}
+	}
+}
 ```
 UVA10008-What's Cryptanalysis?:(密碼翻譯)  
 多筆資料，給多行字串  
