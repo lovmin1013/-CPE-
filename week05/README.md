@@ -168,7 +168,29 @@ UVA10221-Satellites:
 計算出2顆衛星的距離(直線距離、弧長)。  
 
 ```C
-
+#define _USE_MATH_DEFINES
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+int main()
+{
+	double s,a;
+	char c[5];
+	//輸入衛星地面高度 運行角度 單位
+	while(scanf("%lf %lf %s",&s,&a,c) !=EOF){
+		if(strcmp(c,"min")==0) a/=60;
+		//60分=1度
+		if(a>180) a= 360-a;
+		//超過180度，360-度數
+		double ang= a*M_PI/180.0;
+		//角度換算成徑度量
+		double chord= 2.0*(s+6440.0)*sin(ang/2.0);
+		//計算弦長
+		double arc= ang*(s+6440.0);
+		//計算弧長
+		printf("%.6lf %.6lf\n",arc, chord);
+	}
+}
 ```
 UVa10929-You Can Say 11:  
 給多個整數n，看其是否為11的倍數。  
