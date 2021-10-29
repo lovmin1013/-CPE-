@@ -6,7 +6,24 @@ EX:n=1234567892
 -->f(f(n))= 4+7=11(>10)  
 -->f(f(f(n)))= 1-1=2  
 ```C
-
+#include <stdio.h>
+int main()
+{
+	int n,s;
+	scanf("%d",&n);
+	while(n){
+		while(n>9){
+			s=0;
+			while(n){//當n還!=0,繼續進行
+				s+=n%10;//取出個位數字進行加總
+				n/=10;//並丟棄
+			}
+			n=s;
+		}
+		printf("%d\n",n);
+		scanf("%d",&n);
+	}
+}
 ```
 UVA1225-Digit Counting:  
 給予數字，計算每個數字出現的次數(有多組資料)  
