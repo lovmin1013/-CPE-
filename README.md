@@ -16,3 +16,11 @@ UVA10812-Beat the Spread!
 UVA11063-B2-Sequence  
 UVA11764-Jumping Mario  
 UVA12019-Doom's Day Algorithm    
+
+## week05
+UVA11332-Summing Digits  
+UVA1225-Digit Counting  
+UVA272-TeX Quotes   
+UVA10008-What's Cryptanalysis?
+UVA10221-Satellites   
+UVa10929-You Can Say 11   
