@@ -55,6 +55,43 @@ int main()
     }
 }
 ```
+```C
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+int main()
+{
+	char list[50]="";
+	int t,n;
+	
+	scanf("%d",&t);
+	while(t--){
+		for(int i=0; i<50; i++){
+			list[i]='\0';
+		}
+		scanf("%d",&n);
+		
+		for(int i=1; i<=n; i++){
+			char ss[3];
+			int r= sprintf(ss, "%d", i);
+			strcat(list, ss);
+			//將A字串加到B字串後面，A字串值保持不變，B字串變長
+		}
+		
+		int count[10]={0};//建立數字次數陣列
+		for(int i=0; i<strlen(list); i++){
+			int index= list[i]-'0';
+			count[index]++;//累加
+		}
+		
+		for(int i=0; i<10; i++){
+			printf("%d ",count[i]);
+		}
+		printf("\n");
+	}
+}
+```
 UVA272-TeX Quotes:  
 輸入一串文字，將普通的雙引號（"），轉成有方向性的雙引號，而其它文字則不變。  
  每一組雙引號的第一個 " 必須用兩個 ` 字元（就是 `` ）來代替  
