@@ -126,7 +126,7 @@ UVA10008-What's Cryptanalysis?:(密碼翻譯)
 統計各個字幕之出現次數(小寫要轉換為大寫)  
 並依出現次數進行排序，若遇相同則依字元大小排列(ABC...Z)  
 ```C
-#include <Stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include <String.h>
 
@@ -138,26 +138,21 @@ int main()
 	
 	scanf("%d ", &n);
 
-	for(int i=0; i<n; i++)
- 	{
+	for(int i=0; i<n; i++){
   		fgets(line,100,stdin);
-	
-    	for(int j=0; j<strlen(line); j++)
-    	{
-   		if(line[j]>='a' && line[j]<='z')
-   			line[j]-=32;   
-   		if(line[j]>='A' && line[j]<='Z') 
-   			count[line[j]-'A']++;
+		for(int j=0; j<strlen(line); j++)
+    		{
+   			if(line[j]>='a' && line[j]<='z')
+   				line[j]-=32;   
+   			if(line[j]>='A' && line[j]<='Z') 
+   				count[line[j]-'A']++;
+    		}
     	}
-    }
-   
-    for(int i=0; i<26; i++)//找出出現最多次數
-    {
-    	int max=0;
-		for(int j=0; j<26; j++)
-		{
-			if(count[j]>count[max]) max=j;
-		}
+   	for(int i=0; i<26; i++){//找出出現最多次數
+    		int max=0;
+			for(int j=0; j<26; j++){
+				if(count[j]>count[max]) max=j;
+			}
 		if(count[max]!=0) 
 			printf("%c %d\n",max+'A', count[max]);
 		count[max]=0;
