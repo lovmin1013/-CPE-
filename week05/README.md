@@ -30,7 +30,30 @@ UVA1225-Digit Counting:
 EX:n=13，12345678910111213  
 (從0-9) -->162211111  
 ```C
-
+#include <stdio.h>
+int main()
+{
+    int tst, i, j, k;
+    scanf("%d", &tst);//有幾筆
+    while(tst--)
+    {
+        int n, ara[10];
+        for(i=0; i<10; i++) ara[i]=0;//設置一個空陣列
+        scanf("%d", &n);讀取數字
+        for(i=1; i<=n; i++)
+        {
+            j = i;
+            while(j!=0)
+            {
+                k=j%10;
+                ara[k]++;
+                j/=10;
+            }
+        }
+        for(i=0; i<9; i++) printf("%d ", ara[i]);
+        printf("%d\n", ara[9]);
+    }
+}
 ```
 UVA272-TeX Quotes:  
 輸入一串文字，將普通的雙引號（"），轉成有方向性的雙引號，而其它文字則不變。  
