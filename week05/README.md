@@ -150,9 +150,9 @@ int main()
     	}
    	for(int i=0; i<26; i++){//找出出現最多次數
     		int max=0;
-			for(int j=0; j<26; j++){
-				if(count[j]>count[max]) max=j;
-			}
+		for(int j=0; j<26; j++){
+			if(count[j]>count[max]) max=j;
+		}
 		if(count[max]!=0) 
 			printf("%c %d\n",max+'A', count[max]);
 		count[max]=0;
