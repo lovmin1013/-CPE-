@@ -21,6 +21,6 @@ UVA12019-Doom's Day Algorithm
 UVA11332-Summing Digits  
 UVA1225-Digit Counting  
 UVA272-TeX Quotes   
-UVA10008-What's Cryptanalysis?
+UVA10008-What's Cryptanalysis?  
 UVA10221-Satellites   
 UVa10929-You Can Say 11   
