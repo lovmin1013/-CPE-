@@ -234,7 +234,7 @@ int main()
 			}
 		}
 		if((odd-even)%11==0) printf("%s is a multiple of 11.\n",n);
-		else printf("%s is not a multiple of 11.\n");
+		else printf("%s is not a multiple of 11.\n",n);
 	}
 }
 ```
