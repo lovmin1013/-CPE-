@@ -2,7 +2,87 @@ UVA10222-Decode the Mad man:
 僅一行，包含1或以上的單字，進行轉換(讀取的字要於鍵盤位置左移兩格)  
 EX:Ukd,;f --> thanks(轉換的文字都要是小寫)  
 ```C
+#include <stdio.h>
+#include <string.h>
 
+int main()
+{
+	char c[100000];
+	
+	while(gets(c)){
+		for(int i=0; i<strlen(c); i++){
+			switch(c[i]){
+				case '2': printf("`"); break;
+				case '3': printf("1"); break;
+				case '4': printf("2"); break;
+				case '5': printf("3"); break;
+				case '6': printf("4"); break;
+				case '7': printf("5"); break;
+				case '8': printf("6"); break;
+				case '9': printf("7"); break;
+				case '0': printf("8"); break;
+				case '-': printf("9"); break;
+				case '=': printf("0"); break;
+				
+				case 'e': printf("q"); break;
+				case 'r': printf("w"); break;
+				case 't': printf("e"); break;
+				case 'y': printf("r"); break;
+				case 'u': printf("t"); break;
+				case 'i': printf("y"); break;
+				case 'o': printf("u"); break;
+				case 'p': printf("i"); break;
+				case '[': printf("o"); break;
+				case ']': printf("p"); break;
+				case '\\': printf("["); break;
+				
+				case 'd': printf("a"); break;
+				case 'f': printf("s"); break;
+				case 'g': printf("d"); break;
+				case 'h': printf("f"); break;
+				case 'j': printf("g"); break;
+				case 'k': printf("h"); break;
+				case 'l': printf("j"); break;
+				case ';': printf("k"); break;
+				case 39 : printf("l"); break; //若為 '
+				
+				case 'c': printf("z"); break;
+				case 'v': printf("x"); break;
+				case 'b': printf("c"); break;
+				case 'n': printf("v"); break;
+				case 'm': printf("b"); break;
+				case ',': printf("n"); break;
+				case '.': printf("m"); break;
+				case '/': printf(","); break;
+
+				case 'E': printf("q"); break;
+				case 'R': printf("w"); break;
+				case 'T': printf("e"); break;
+				case 'Y': printf("r"); break;
+				case 'U': printf("t"); break;
+				case 'I': printf("y"); break;
+				case 'O': printf("u"); break;
+				case 'P': printf("i"); break;
+				
+				case 'D': printf("a"); break;
+				case 'F': printf("s"); break;
+				case 'G': printf("d"); break;
+				case 'H': printf("f"); break;
+				case 'J': printf("g"); break;
+				case 'K': printf("h"); break;
+				case 'L': printf("j"); break;
+				
+				case 'C': printf("z"); break;
+				case 'V': printf("x"); break;
+				case 'B': printf("c"); break;
+				case 'N': printf("v"); break;
+				case 'M': printf("b"); break;
+				case ' ': printf(" "); break;
+			}
+		}
+		printf("\n");
+	}	
+}
 ```
 UVA10409-Die Game:  
 給予一組指令(前後左右-->北南西東)，90度轉動骰子  
