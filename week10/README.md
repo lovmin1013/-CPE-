@@ -136,5 +136,57 @@ UVA10415-Eb Alto Saxophone Player:
 輸入要為十隻手指頭各自按了幾次。  
 (僅計算0變為1的次數)(ASCII碼: A-G => 65-71 a-g => 97-103)  
 ```C
+#include<stdio.h>
+#include<string.h>
 
+char fingering[14][12] = {  
+	"c0111001111", "d0111001110",
+    "e0111001100", "f0111001000",
+    "g0111000000", "a0110000000",
+    "b0100000000", "C0010000000",
+    "D1111001110", "E1111001100",
+    "F1111001000", "G1111000000",
+    "A1110000000", "B1100000000"
+    };
+
+int main(){
+
+    int Case;
+    int i, j;
+
+    scanf("%d", &Case);
+    getchar();
+
+    while(Case--){
+
+        char Note[201] = {0};
+        char current[12] = "00000000000";//當前按下的
+        int count[10] = {0};
+
+        gets(Note);
+
+        for(i = 0; i < strlen(Note); i++){
+            char next[12] = {0};//下一個音要按下的
+            for(j = 0; j < 14; j++){//檢查音名
+                if(Note[i] == fingering[j][0]){//判斷第一個字元
+                    strcpy(next, fingering[j]);//找到就更新即將按下的指法
+                    break;
+                }
+            }
+
+            for(j = 1; j <= 10; j++){//計算新按下的次數
+                if(current[j] == '0' && next[j] == '1'){
+                    count[j - 1]++;//若有不同則++
+                }
+            }
+            strcpy(current, next);//更新複製當前按下的狀態
+        }
+
+        printf("%d", count[0]);
+        for(j = 1; j < 10; j++){
+            printf(" %d", count[j]);
+        }
+        printf("\n");
+    }
+}
 ```
