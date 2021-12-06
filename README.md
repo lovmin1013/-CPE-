@@ -28,3 +28,7 @@ UVA10409-Die Game
 UVA10415-Eb Alto Saxophone Player  
 ## week11
 UVA10041-Vito's family   
+## week12
+UVA10062-Tell me the frequencies  
+UVA10420-List of Conquests  
+UVA11321-Sort! Sort!! and Sort!!!  
