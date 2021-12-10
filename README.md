@@ -32,3 +32,6 @@ UVA10041-Vito's family
 UVA10062-Tell me the frequencies  
 UVA10420-List of Conquests  
 UVA11321-Sort! Sort!! and Sort!!!  
+## week13
+UVA11321-Sort! Sort!! and Sort!!!
+UVA10107：What is the Median?   
