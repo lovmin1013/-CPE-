@@ -1,3 +1,7 @@
+UVA10107-What is the Median?  
+僅一組，每行輸入一個數字，形成越來越長的數列  
+每輸入一個數，就要輸出當前數列的中位數(排序後)  
+EX:1 3 4 60 70 50 2 --> 1 2 3 3 4 27 4  
 ```C
 #include <stdio.h>
 #include <stdlib.h>
