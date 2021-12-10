@@ -34,4 +34,4 @@ UVA10420-List of Conquests
 UVA11321-Sort! Sort!! and Sort!!!  
 ## week13
 UVA11321-Sort! Sort!! and Sort!!!
-UVA10107：What is the Median?   
+UVA10107-What is the Median?   
