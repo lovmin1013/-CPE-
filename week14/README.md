@@ -1,4 +1,9 @@
-UVA11349-Symmetric Matrix:
+UVA11349-Symmetric Matrix:  
+輸入有幾筆資料，再輸入是幾乘幾的方陣，判別此舉鎮是否為對稱矩陣。  
+EX: N=3  
+5 1 3  
+2 0 2  
+3 1 5  
 ```C
 #include <stdio.h>
 int main()
@@ -25,7 +30,11 @@ int main()
  	}
 }
 ```
-UVA10193-All You Need Is Love:
+UVA10193-All You Need Is Love:  
+輸入有幾比，每兩行為一組。輸入要為二元數，  
+並算出兩數間是否有最大公因數L。  
+(L最左邊不能為0，且L不得為1)，輸入的字元要先轉換為數字。  
+ASCII碼'0'=48  
 ```C
 #include <stdio.h>
 #include <string.h>
@@ -70,7 +79,8 @@ int main()
 	return 1;
 }
 ```
-UVA10056-What is the Probability?
+UVA10056-What is the Probability?  
+輸入有幾比，再輸入(n, p, k)->(多少人，機率，第k個)  
 ```C
 #include <stdio.h>
 #include <math.h>
