@@ -27,7 +27,48 @@ int main()
 ```
 UVA10193-All You Need Is Love:
 ```C
-
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+int getGCD(int a, int b)
+{
+	int r;
+	if(a<b){
+		int temp= a;
+		a= b;
+		b= temp;
+	}
+	r=a%b;
+	while(r!=0){
+		a= b;
+		b= r;
+		r= a%b;
+	}
+	return b;
+}
+int main()
+{
+	int n, t;
+	scanf("%d",&n);
+	t= n;
+	
+	while(t--){
+		char s1[31];
+		char s2[31];
+		scanf("%s %s",s1, s2);
+		int a=0, b=0;
+		for(int i=0; i<strlen(s1); i++){
+			a += (s1[i]-48)*(int)pow(2, strlen(s1)-1-i);
+		}
+		for(int i=0; i<strlen(s2); i++){
+			b += (s2[i]-48)*(int)pow(2, strlen(s2)-1-i);
+		}
+		int gcd= getGCD(a, b);
+		if(gcd>1) printf("Pair #%d: All you need is love!\n",n-t);
+		else printf("Pair #%d: Love is not all you need!\n",n-t);
+	}
+	return 1;
+}
 ```
 UVA10056-What is the Probability?
 ```C
