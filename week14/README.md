@@ -31,5 +31,25 @@ UVA10193-All You Need Is Love:
 ```
 UVA10056-What is the Probability?
 ```C
-
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+	int n;
+	scanf("%d",&n);
+	
+	for(int i=0; i<n; i++){
+		int N, k;
+		double p;
+		scanf("%d %lf %d\n",&N, &p, &k);
+		double q= 1-p, s1, r, S;
+		if(p==0) S=0.0;
+		else{
+			s1= pow(q,(k-1))*p;
+			r= pow(q, N);
+			S=s1/(1-r);
+		}
+		printf("%.4lf\n",S);
+	}
+}
 ```
