@@ -92,12 +92,48 @@ int main()
 		}
 		memset(n, 0, sizeof(n));
 		//memset 是用來對一段記憶體區塊全部設定為某個值的函式
+		//memset(字串, 預設值, 長度) <- 在<string.h>裡
 	}
 }
 ```
 UVA10931-Parity:  
+將n轉為二進制，將各"數字"相加  
+EX: 21
+-> 21/2=10...1;   
+-> 10/2= 5...0;  
+-> 5/2 = 2...1;  
+-> 2/2 = 1...0;  
+-> 1/2 = 0...1;  
+->->->-> 21 = 10101  
 ```C
+#include <stdio.h>
+int main()
+{
+    long long int n;
+    int i,c,b[1000];
+    while(scanf("%lld",&n)==1)
+    {
+        if(n==0)
+        break;
+        i=0;
+        while(n!=0)
+        {
+            b[i]=n%2;
+            n/=2;
+            i++;
+        }
+        c=0;
+        printf("The parity of ");
+        for(i=i-1;i>=0;i--)
+        {
+            printf("%d",b[i]);
+            if(b[i]==1)
+            c++;
+        }
+        printf(" is %d (mod 2).\n",c);
 
+    }
+}
 ```
 UVA12602-Nice Licence Plates:  
 ```C
