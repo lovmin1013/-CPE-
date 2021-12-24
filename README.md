@@ -33,5 +33,15 @@ UVA10062-Tell me the frequencies
 UVA10420-List of Conquests  
 UVA11321-Sort! Sort!! and Sort!!!  
 ## week13
-UVA11321-Sort! Sort!! and Sort!!!
+UVA11321-Sort! Sort!! and Sort!!!  
 UVA10107-What is the Median?   
+## week14
+UVA10056-What is the Probability?  
+UVA10193-All You Need Is Love   
+UVA11349-Symmetric Matrix   
+## week15
+UVA10190-Divide, But Not Quite Conquer!    
+UVA10235-Simply Emirp    
+UVA10922-2 the 9s    
+UVA10931-Parity    
+UVA12602-Nice Licence Plates    
