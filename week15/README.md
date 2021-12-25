@@ -37,9 +37,36 @@ int main()
 	}
 }
 ```
-UVA10235-Simply Emirp:  
+UVA10235-Simply Emirp:(判斷質數)  
+先判斷n是否為質數，若是的話再看n的倒數是否也為質數  
+(但若倒數與原本數字一樣則僅為質數)  
+有三種結果:  
+-> 2者都是 為emirp  
+-> 僅n是 為prime  
+-> 皆不是 為not prime  
 ```C
-
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+	int n;
+	while(scanf("%d",&n) !=EOF){
+		int c=0, a=n, d=0, m=0;
+		while(a>0){
+			m= m*10+a%10;
+			a/=10;
+		}
+		for(int i=1; i<n; i++){
+			if(n%i==0) c++;
+		}
+		for(int i=1; i<m; i++){
+			if(m%i==0) d++;
+		}
+		if(c==1 && d==1 && n!=m) printf("%d is emirp.\n", n);
+		else if(c!=1) printf("%d is not prime.\n", n);
+		else printf("%d is prime.\n", n);
+	}
+}
 ```
 UVA10922-2 the 9s:  
 判別數字是否為9的倍數，及其深度  
