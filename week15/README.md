@@ -163,6 +163,33 @@ int main()
 }
 ```
 UVA12602-Nice Licence Plates:  
+輸入有幾比，車牌前三字母換算為數字，  
+減掉後面四位數字取絕對值  
+若<100 輸出nice 反之則 not nice  
 ```C
-
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int main()
+{
+	int n;
+	char str[10];
+	scanf("%d",&n);
+	while(n--){
+		scanf("%s",str);
+		int pa=0;
+		for(int i=0; i<3; i++){
+			pa += (str[i]-65)*(int)pow(26, 2-i);
+		}
+		int pn=0;
+		for(int i=4; i<=7; i++){
+			pn += (str[i]-48)*(int)pow(10, 7-i);
+		}
+		int diff;
+		diff= abs(pn-pa);
+		
+		if(diff<=100) printf("nice\n");
+		else printf("not nice\n");
+	}
+}
 ```
