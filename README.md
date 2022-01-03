@@ -45,3 +45,8 @@ UVA10235-Simply Emirp
 UVA10922-2 the 9s    
 UVA10931-Parity    
 UVA12602-Nice Licence Plates    
+## week16
+UVA299-Train Swapping  
+UVA10101-Bangla Numbers  
+UVA10038-Jolly Jumpers  
+UVA10189-Minesweeper  
