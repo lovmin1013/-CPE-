@@ -33,7 +33,39 @@ int main()
 ```
 UVA10101-Bangla Numbers:  
 ```C
-
+#include <stdio.h>
+void bangla(long long num)
+{
+	if( num >= 10000000){
+		bangla(num/10000000);//超過7位數先處理前段
+		printf(" kuti");
+		num %= 10000000;//取出後7位
+	}
+	if( num >= 100000){
+		printf(" %lld lakh", num/100000);//印出第6.7位
+		num %= 100000;//取出後5位
+	}
+	if( num >= 1000){
+		printf(" %lld hajar", num/1000);//印出第4.5位
+		num %= 1000;//取出後3位
+	}
+	if( num >= 100){
+		printf(" %lld shata", num/100);//印出第3位
+		num %= 100;//取出後2位
+	}
+	if(num) printf(" %lld", num);//印出後2位
+}
+int main()
+{
+	long long num;
+	long long count =0;
+	while(scanf("%lld",&num)==1){
+		printf("%4lld.",++count);
+		if(num) bangla(num);//若資料非0 呼叫函式
+		else printf(" 0");
+		printf("\n");
+	}
+}
 ```
 UVA10038-Jolly Jumpers:
 ```C
