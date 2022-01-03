@@ -113,5 +113,41 @@ int main()
 ```
 UVA10189-Minesweeper:  
 ```C
-
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+	int a, b, m=1;
+	while(cin>>a>>b){
+		char n[a][b];
+		if(a==0 && b==0) break;
+		if(m!=1) cout<<endl;
+		printf("Field #%d:\n", m);
+		for(int i=0; i<a; i++){
+			for(int j=0; j<b; j++){
+				cin>>n[i][j];
+			}
+		}
+		for(int i=0; i<a; i++){
+			for(int j=0; j<b; j++){
+				int c=0;
+				if(n[i][j]=='*'){
+					printf("%c",n[i][j]);
+				}
+				else{
+					for(int k=j-1; k<=j+1; k++){
+						if(k>=0 && k<b){
+							if(i!=0 && n[i-1][k]=='*') c++;
+							if(n[i][k]=='*') c++;
+							if(i!=a-1 && n[i+1][k]=='*') c++;
+						}
+					}
+					printf("%d",c);
+				}
+			}
+			cout<<endl;
+		}
+		m++;
+	}
+}
 ```
