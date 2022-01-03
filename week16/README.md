@@ -69,7 +69,47 @@ int main()
 ```
 UVA10038-Jolly Jumpers:
 ```C
-
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	int n;
+	while(scanf("%d", &n)!= EOF){
+		int a[n];
+		for(int i=0; i<n; i++){
+			scanf("%d",&a[i]);
+		}
+		int check[n-1];//按順序排
+		for(int i=0; i<n-1; i++){
+			check[i]= i+1;
+		}
+		int diff[n-1];//計算相鄰數差
+		for(int i=0; i<n-1; i++){
+			diff[i] = abs(a[i+1]-a[i]);
+		}
+		for(int i=0; i<n-1; i++){
+			for(int j=i+1; j<n-1; j++){
+				if(diff[i]> diff[j]){
+					int temp= diff[i];
+					diff[i]= diff[j];
+					diff[j]= temp;
+				}
+			}
+		}
+		int is_j= 1;
+		for(int i=0; i<n-1; i++){
+			if(diff[i]!= check[i]){
+				is_j=0;
+				break;
+			}
+			else{
+				is_j=1;
+			}
+		}
+		if(is_j == 1) printf("Jolly\n");
+		else printf("Not jolly\n");
+	}
+}
 ```
 UVA10189-Minesweeper:  
 ```C
